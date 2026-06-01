@@ -1,7 +1,7 @@
 # Uber Data Analytics
 ### Analyzing Data and Arriving at Better Solutions Through Machine Learning
 
-![Project cover](images/image1.png)
+![Project cover](../images/image1.png)
 
 ---
 
@@ -168,41 +168,41 @@ _Driver cancellation reasons:_ Customer Related Issues 25.3%, Capacity Issues 25
 
 ### Geographic Context — Pickup → Drop Transportation Network (Delhi / Gurgaon / Noida)
 
-![Transportation network — overview map (Figure 1)](images/image2.jpg)
+![Transportation network — overview map (Figure 1)](../images/image2.jpg)
 
 The map above shows the operating area analyzed in this project. The key regions are described below.
 
 **1. Connaught Place** — *Central New Delhi.* Commercial and administrative center, major transportation hub, very high traffic density.
 
-![Connaught Place](images/image3.jpg)
+![Connaught Place](../images/image3.jpg)
 
 **2. Cyber Hub (Gurgaon)** — *Gurgaon.* Modern business district, high concentration of offices and restaurants, strong day and night activity.
 
-![Cyber Hub](images/image4.jpg)
+![Cyber Hub](../images/image4.jpg)
 
 **3. IGI Airport (Indira Gandhi International Airport)** — *New Delhi.* Main international airport, major travel hub, very high passenger demand.
 
-![IGI Airport](images/image5.png)
+![IGI Airport](../images/image5.png)
 
 **4. AIIMS** — One of the largest hospitals in India, continuous movement of patients, staff and students, high transportation demand.
 
-![AIIMS](images/image6.jpg)
+![AIIMS](../images/image6.jpg)
 
 **5. Noida Sector 18** — Large residential area, close to airport connectivity, frequent daily commuting.
 
-![Noida Sector 18](images/image7.jpg)
+![Noida Sector 18](../images/image7.jpg)
 
 **6. Dwarka Sector 21** — *West Delhi.* Large residential area, close to airport connectivity, frequent daily commuting.
 
-![Dwarka Sector 21](images/image8.jpg)
+![Dwarka Sector 21](../images/image8.jpg)
 
 **7. Chandni Chowk** — *Old Delhi.* Historic market area, extremely high population density, heavy traffic and congestion.
 
-![Chandni Chowk](images/image9.jpg)
+![Chandni Chowk](../images/image9.jpg)
 
 **8. Saket** — *South Delhi.* Mixed residential and commercial area, popular shopping destinations, moderate to high demand.
 
-![Saket](images/image10.jpg)
+![Saket](../images/image10.jpg)
 
 ---
 
@@ -210,7 +210,7 @@ The map above shows the operating area analyzed in this project. The key regions
 
 **Before cleaning (Table 3)**
 
-![Data before cleaning](images/image11.png)
+![Data before cleaning](../images/image11.png)
 
 The following preparation steps were applied, in sequence:
 
@@ -226,7 +226,7 @@ The following preparation steps were applied, in sequence:
 
 **After cleaning (Table 4)**
 
-![Data after cleaning](images/image12.png)
+![Data after cleaning](../images/image12.png)
 
 ---
 
@@ -316,7 +316,7 @@ The interactive BI dashboard is organized into four views, each answering a set 
 
 ### 1. Overview — *What is the overall state of operations?*
 
-![Dashboard — Overview](images/image13.png)
+![Dashboard — Overview](../images/image13.png)
 
 A high-level summary of Uber's operations: total trips, average driver rating, average booking value, and cancellation rate.
 - **Total Trips:** 148K
@@ -330,7 +330,7 @@ Components: a gauge for orders / average captain rating / average trip price; a 
 
 ### 2. User Behavior — *How and when do users book?*
 
-![Dashboard — User Behavior](images/image14.png)
+![Dashboard — User Behavior](../images/image14.png)
 
 Explains user behavior through most frequent days and hours, vehicle type, and payment method. Components: line chart of trips by day, column chart of trips by hour, and pie/donut charts of trips by payment method.
 
@@ -338,7 +338,7 @@ Explains user behavior through most frequent days and hours, vehicle type, and p
 
 ### 3. Map Analysis — *Where is demand concentrated?*
 
-![Dashboard — Map Analysis](images/image15.png)
+![Dashboard — Map Analysis](../images/image15.png)
 
 - **Pickup locations map:** shows the distribution of trips by origin, helping identify high-demand initiation areas. Areas such as New Delhi, Faridabad, and Meerut show higher pickup frequency.
 - **Drop-off locations map:** visualizes average booking value and booking count by destination. Locations such as Sonipat, Meerut, and Rohini show a significant concentration of trips.
@@ -348,15 +348,15 @@ Explains user behavior through most frequent days and hours, vehicle type, and p
 
 ### 4. Relationships — *How do variables relate to each other?*
 
-![Dashboard — Relationships 1](images/image16.png)
+![Dashboard — Relationships 1](../images/image16.png)
 
-![Dashboard — Relationships 2](images/image17.png)
+![Dashboard — Relationships 2](../images/image17.png)
 
 - **Customer and driver ratings by payment method:** evaluates how different payment methods correlate with service quality; a higher rating for a given method may signal user preference and trust.
 - **Distance vs. booking value by pickup location:** a scatter analysis exploring whether longer distances correlate with higher booking values, to guide fare pricing by pickup point.
 - **Distance vs. booking value (general):** longer distances tend to result in higher booking values; variance analysis highlights where pricing could be optimized.
 
-![Distance vs. booking value](images/image18.png)
+![Distance vs. booking value](../images/image18.png)
 
 **Vehicle type vs. cancellations and reasons:** compares cancelled rides by customers vs. drivers across vehicle types (Auto, Go Mini, eBike, Premier Sedan, Uber XL), broken down by cancellation reason (e.g., AC not working, wrong address, driver unavailable, vehicle issues).
 
@@ -406,47 +406,47 @@ The AI layer was implemented in **Python 3** inside **Google Colaboratory**. Key
 
 **Step 1 — Import required libraries.** pandas (tabular data), numpy (numerical arrays), `train_test_split` (splitting), `DecisionTreeRegressor` (the model), `sklearn.tree` (tree plotting/exporting), `mean_absolute_error`, `accuracy_score`, `confusion_matrix`, `classification_report` (evaluation), matplotlib and seaborn (plots).
 
-![Step 1 — imports](images/image19.png)
+![Step 1 — imports](../images/image19.png)
 
 **Step 2 — Load and clean CSV.** Load the CSV into a DataFrame (`low_memory=False`), drop rows missing Date, Time, or Pickup Location, combine Date and Time into a single datetime, sort chronologically, and extract features: hour, day of week (0 = Monday … 6 = Sunday), date-only, and a weekend flag (1 for Saturday/Sunday). Pickup Location is cast to string, trimmed, and stripped of quotes.
 
-![Step 2 — load and clean](images/image20.png)
+![Step 2 — load and clean](../images/image20.png)
 
 **Steps 3–4 — Encode, define features, split, and train.** Categorical columns (Vehicle Type, Pickup Location, Drop Location, Payment Method) are one-hot encoded. Features (X) keep only numeric columns with missing values filled (0 for features, median for the target). The data is split 80/20 and a Decision Tree Regressor with `max_depth=10` is trained.
 
-![Step 3–4 — encode and train](images/image21.png)
+![Step 3–4 — encode and train](../images/image21.png)
 
 **Step 5 — Predict and evaluate.** The model predicts ride counts on the test set, and MAE measures average prediction error.
 
-![Step 5 — predict](images/image22.png)
-![Step 5 — evaluate](images/image23.png)
+![Step 5 — predict](../images/image22.png)
+![Step 5 — evaluate](../images/image23.png)
 
 **Step 6 — Classification metrics.** Predicted and actual values are rounded to integers and clipped to 1–5 to compute an accuracy score, confusion matrix, and classification report (precision, recall, F1).
 
-![Step 6 — metrics](images/image24.png)
+![Step 6 — metrics](../images/image24.png)
 
 **Step 7 — Plots.** A seaborn heatmap of the confusion matrix (saved as `confusion_matrix.png`), a line plot of actual vs. predicted ride counts (`actual_vs_predicted.png`), and a diagram of the first three levels of the trained tree (`decision_tree_structure.png`).
 
-![Confusion matrix plot](images/image25.png)
-![Actual vs predicted plot](images/image26.png)
+![Confusion matrix plot](../images/image25.png)
+![Actual vs predicted plot](../images/image26.png)
 
 #### Outputs
 
 **Decision tree structure.** The tree predicts ride counts from features such as hour of day, day of week, weekend indicator, previous-hour rides, ride distance, driver and customer ratings, vehicle type, pickup/drop location, and payment method. From the root node, each branch splits the data by a feature condition; leaf nodes give the final predicted ride count, with darker node colors indicating more confident predictions.
 
-![Decision tree structure](images/image29.png)
+![Decision tree structure](../images/image29.png)
 
 **Confusion matrix.** Diagonal values are correct predictions: class 1 was predicted correctly 26,481 times, class 2 1,592 times, class 3 71 times. Off-diagonal values are errors. The model performs best on lower ride-count classes (especially class 1), with accuracy decreasing for higher classes due to fewer samples.
 
-![Decision tree confusion matrix](images/image30.png)
+![Decision tree confusion matrix](../images/image30.png)
 
 **Performance evaluation.** The model achieved **MAE 0.118** and an **accuracy of 93.83%**. Class 1 reached precision 0.94, recall 1.00, F1 0.97; weighted averages were precision 0.94, recall 0.94, F1 0.93. Lower performance on higher ride-count classes is attributed to class imbalance (most observations are class 1).
 
-![Classification report](images/image31.jpg)
+![Classification report](../images/image31.jpg)
 
 **Actual vs. predicted.** The predicted line generally follows the actual line, closely matching for the most frequent ride-count levels, with minor over/under-estimation at some points — demonstrating good predictive performance.
 
-![Actual vs predicted](images/image32.png)
+![Actual vs predicted](../images/image32.png)
 
 ---
 
@@ -456,35 +456,35 @@ The AI layer was implemented in **Python 3** inside **Google Colaboratory**. Key
 
 **Step 1 — Import libraries.** Data handling (pandas, numpy), visualization (matplotlib, seaborn), ML preprocessing/metrics (`train_test_split`, `StandardScaler`, `accuracy_score`, `confusion_matrix`, `classification_report`), and Keras modules: `Sequential`, `Dense`, `Dropout`, and the `EarlyStopping` callback.
 
-![Step 1 — imports](images/image33.png)
+![Step 1 — imports](../images/image33.png)
 
 **Step 2 — Load CSV and preprocess date/time.** Load the CSV, drop rows missing Date, Time, or Booking Status, and combine Date and Time into a datetime column.
 
-![Step 2 — load and preprocess](images/image34.png)
+![Step 2 — load and preprocess](../images/image34.png)
 
 **Step 3 — Create the classification target and clean numeric columns.** Categorical columns (Vehicle Type, Pickup Location, Payment Method) are one-hot encoded with the first category dropped to avoid multicollinearity. Numeric columns (Ride Distance, Driver Ratings, Customer Rating, Booking Value) are coerced to numeric, with invalid entries filled by defaults (0 for distance/value, 4.0 for ratings).
 
-![Step 3 — target and clean](images/image35.png)
+![Step 3 — target and clean](../images/image35.png)
 
 **Step 4 — Dummy variables and feature/target definition.** Base numeric/engineered features (hour, day_of_week, weekend, Ride Distance, Driver Ratings, Customer Rating, Booking Value) plus encoded categoricals form X (cast to float32); y is the target.
 
-![Step 4 — features and target](images/image36.png)
+![Step 4 — features and target](../images/image36.png)
 
 **Step 5 — Split and scale.** An 80/20 split (`test_size=0.2`, `random_state=42`) followed by `StandardScaler` (fit on train, applied to both), which helps deep models converge.
 
-![Step 5 — split and scale](images/image37.png)
+![Step 5 — split and scale](../images/image37.png)
 
 **Step 6 — Build the network.** A Sequential model: Dense(64, ReLU) → Dropout(0.2) → Dense(32, ReLU) → Dropout → Dense(1, sigmoid) for binary classification.
 
-![Step 6 — architecture](images/image38.jpg)
+![Step 6 — architecture](../images/image38.jpg)
 
 **Step 7 — Compile, train, evaluate.** `EarlyStopping` monitors validation loss (patience 3, best weights restored). Training uses batch size 256, up to 15 epochs, validation split 0.1. Predicted probabilities > 0.5 map to class 1, else 0.
 
-![Step 7 — train](images/image39.png)
+![Step 7 — train](../images/image39.png)
 
 **Step 8 — Accuracy, confusion matrix, classification report.** Accuracy compares predicted vs. actual labels; the confusion matrix and report (precision, recall, F1, support) summarize performance.
 
-![Step 8 — metrics](images/image40.png)
+![Step 8 — metrics](../images/image40.png)
 
 **Step 9 — Plots.** Training/validation accuracy and loss curves, plus a confusion-matrix heatmap (red colormap, axes labeled Cancelled/Incomplete and Completed, saved as `nn_confusion_matrix.png`).
 
@@ -505,15 +505,15 @@ The classifier correctly identified **3,167** cancelled/incomplete bookings and 
 
 **Architecture summary.** Dense(64) input layer (12,416 parameters) → Dropout → Dense(32) hidden layer (2,080 parameters) → Dropout → Dense(1, sigmoid) output (33 parameters), for **14,529 trainable parameters** total — a balanced design combining feature learning with overfitting prevention.
 
-![NN architecture summary](images/image45.png)
+![NN architecture summary](../images/image45.png)
 
 **Learning curves.** Training accuracy rose from ≈ 88% to nearly 99%, with validation accuracy tracking closely; loss for both sets fell toward zero. The close alignment of curves indicates good generalization without significant overfitting.
 
-![NN learning curves](images/image46.png)
+![NN learning curves](../images/image46.png)
 
 **Confusion-matrix heatmap.** The large diagonal values (3,167 and 5,306) with minimal off-diagonal errors (28 and 41) confirm very high classification accuracy.
 
-![NN confusion matrix heatmap](images/image47.jpg)
+![NN confusion matrix heatmap](../images/image47.jpg)
 
 ---
 
@@ -523,61 +523,61 @@ This analysis examines the distribution of ride requests across regions during e
 
 **Step 1 — Import libraries.** pandas, numpy, matplotlib, seaborn, `train_test_split`, `StandardScaler`, evaluation metrics (`mean_absolute_error`, `accuracy_score`, `confusion_matrix`, `classification_report`), and TensorFlow/Keras (`Sequential`, `Dense`, `Dropout`, `EarlyStopping`).
 
-![Step 1 — imports](images/image48.png)
+![Step 1 — imports](../images/image48.png)
 
 **Step 2 — Read and clean the dataset.** `read_csv(..., low_memory=False)` then drop rows missing Date, Time, Pickup Location, or Drop Location.
 
-![Step 2 — read and clean](images/image49.png)
+![Step 2 — read and clean](../images/image49.png)
 
 **Step 3 — Date/time feature engineering.** Combine Date and Time into a datetime via `to_datetime()`, sort chronologically, and extract hour, day of week (Monday 0 … Sunday 6), a weekend indicator (1 for Sat/Sun), and a date-only column.
 
-![Step 3 — feature engineering](images/image50.png)
+![Step 3 — feature engineering](../images/image50.png)
 
 **Step 4 — Feature engineering and target creation.** Standardize text columns (pickup/drop location, vehicle type, payment method), create a previous-hour-rides feature to capture historical activity, and build the target `ride_count` (total rides per hour per region).
 
-![Step 4 — target creation](images/image51.png)
+![Step 4 — target creation](../images/image51.png)
 
 **Step 5 — Numerical cleaning.** Convert Ride Distance to numeric (invalid → 0); convert Avg VTAT and Avg CTAT to numeric (missing → column median).
 
-![Step 5 — numeric cleaning](images/image52.png)
+![Step 5 — numeric cleaning](../images/image52.png)
 
 **Step 6 — Define features and target.** Select numeric/engineered features (hour, day of week, weekend, ride distance, average arrival times, previous-hour activity) plus encoded categoricals; cast to float32 and fill remaining missing values with 0.
 
-![Step 6 — features and target](images/image53.png)
+![Step 6 — features and target](../images/image53.png)
 
 **Step 7 — Split and scale.** 80/20 train/test split followed by `StandardScaler` normalization for stable training.
 
-![Step 7 — split and scale](images/image54.png)
+![Step 7 — split and scale](../images/image54.png)
 
 **Step 8 — Build the deep model.** A Sequential ANN for regression: hidden layers of 128, 64, and 32 neurons (ReLU) with Dropout layers between them, and a single linear-activation output neuron for continuous prediction. `model.summary()` displays the structure.
 
-![Step 8 — build model](images/image55.png)
+![Step 8 — build model](../images/image55.png)
 
 **Step 9 — Train with early stopping.** `EarlyStopping` monitors validation loss (patience 3); training uses 15 epochs, batch size 256, and a 0.1 validation split.
 
-![Step 9 — training](images/image56.png)
+![Step 9 — training](../images/image56.png)
 
 **Step 10 — Evaluate.** Predict on the test set, compute MAE, then round predictions to integers to compute accuracy, confusion matrix, and classification report.
 
-![Step 10 — evaluation](images/image57.png)
+![Step 10 — evaluation](../images/image57.png)
 
 **Step 11 — Visualize.** Plot learning curves (training/validation loss) and a confusion-matrix heatmap to assess convergence and classification quality.
 
-![Step 11 — visualization](images/image58.png)
+![Step 11 — visualization](../images/image58.png)
 
 #### Outputs
 
 **Architecture.** A fully connected Sequential network: Dense(128, ReLU) input → Dropout(0.2) → Dense(64, ReLU) → Dropout(0.2) → Dense(32, ReLU) → Dense(1, linear) output. **Total parameters: 12,641**, all trainable (0 non-trainable), optimized with Adam. The design balances capacity to learn complex patterns with being lightweight enough to avoid overfitting.
 
-![ANN architecture](images/image63.png)
+![ANN architecture](../images/image63.png)
 
 **Training convergence.** Trained in micro-batches of 256 with a 10% validation split, using Adam and an MAE loss. Epoch 1 started at training loss 0.3703 / val_loss 0.1983; by Epoch 4 these fell to 0.1472 / 0.1374; validation error stabilized at ≈ 0.1367 by Epoch 5. EarlyStopping (patience 3, `restore_best_weights=True`) halted training at Epoch 7, preventing overfitting and keeping the best weights.
 
-![Training convergence](images/image64.png)
+![Training convergence](../images/image64.png)
 
 **Final metrics.** Feature matrix shape (19,994 samples × 11 features). Final **MAE ≈ 0.1367** and **accuracy 95.89%** after mapping outputs to discrete demand scales, with macro average 0.97 and weighted average 0.96 — balanced performance across demand levels.
 
-![Final metrics](images/image65.png)
+![Final metrics](../images/image65.png)
 
 **Visual confirmation.** The MAE training/validation curves collapse together and plateau (no overfitting); the confusion heatmap clusters tightly on the diagonal; and plotting actual vs. predicted values for the first 100 test points shows near-identical path matching, tracing real-time spikes and drops in ride density accurately.
 
@@ -646,7 +646,7 @@ This analysis examines the distribution of ride requests across regions during e
 
 A flowchart is a diagram made of boxes and arrows that can represent an algorithm (a step-by-step set of directions), a process (a sequence of stages ending in a result), or the planned stages of a project.
 
-![Project flowchart](images/image66.png)
+![Project flowchart](../images/image66.png)
 
 ---
 
