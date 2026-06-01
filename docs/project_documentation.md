@@ -16,11 +16,10 @@
 
 **Course:** Graduation Project in Business Intelligence and Data Analytics
 
-**Semester:** First Semester, 2025/2026
+**Semester:** Second Semester, 2025/2026
 
-**Date:** _TODO — add submission date_
 
-> _Supervisor: TODO — add supervisor name (not present in the source document)._
+> _Supervisor:  (Dr. Ayman Mansour)._
 
 ---
 
@@ -44,7 +43,7 @@
 
 ## Abstract
 
-> _Note: the original Word document did not contain an explicit Abstract. The draft below was assembled from the project's own Introduction, AI section, and Results so the required section is not left empty. Review and adjust as needed._
+
 
 Ride-booking and delivery applications such as Uber and Careem have become part of daily life both globally and in Jordan, offering fast and convenient transportation. Despite their advantages, these platforms face challenges including trip cancellations, delays, pricing inconsistencies, and variations in service quality. This project analyzes a large ride-booking dataset to understand user behavior and identify the key factors that influence booking outcomes, especially cancellations.
 
@@ -56,7 +55,7 @@ The models performed strongly: the Decision Tree Regressor reached about 93.83% 
 
 ## Acknowledgment
 
-> _TODO — the source Word document did not include an acknowledgment. Add thanks to your supervisor, department, family, and anyone who supported the project._
+"I would like to thank everyone at University of Petra, and especially the academic staff who provided us with very strong knowledge and beautiful days. I would also like to thank my parents, who were the motivation that brought me to this success, my wonderful family, and my friends. Heartfelt thanks to all of you."
 
 ---
 
@@ -230,11 +229,8 @@ The following preparation steps were applied, in sequence:
 
 ---
 
-## Data Visualization and Insights
 
-This section presents the descriptive analysis built on the cleaned data.
 
-> _Reviewer note: the descriptive-analysis pivot tables below total 150,000 rows, while the Dataset Overview reports 148,770 bookings. Consider reconciling the two figures (e.g., pre- vs. post-cleaning counts) in your final version._
 
 ### Number of delivery orders during each month (Table 5)
 
@@ -658,7 +654,6 @@ A flowchart is a diagram made of boxes and arrows that can represent an algorith
 - Wikipedia — National Capital Region (India): https://en.wikipedia.org/wiki/National_Capital_Region_(India)
 - Canva (design assets)
 
-> _Tip: convert these into a consistent citation style (APA or Chicago) for the final submission._
 
 ---
 
