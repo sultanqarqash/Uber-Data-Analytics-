@@ -591,13 +591,11 @@ This analysis examines the distribution of ride requests across regions during e
 | Spreadsheet analysis | Microsoft Excel *(implied by pivot tables)* | Descriptive pivot-table analysis (monthly orders, vehicle types, payments, locations) |
 | Design / supporting assets | Canva | Visual/diagram assets |
 
-> _TODO: confirm and name the exact BI/spreadsheet tools used for the dashboard and pivot tables — they are evident from the figures but not stated explicitly in the source._
 
 ---
 
 ## Project Deployment Effort – Use Case
 
-> _Note: the source document describes how the analysis and models would be used and the value they create, rather than a built deployment (e.g., a hosted web app). The intended use cases are captured below; a concrete deployment mechanism is marked as a next step._
 
 **How a business user would consume this project.** Through an interactive BI dashboard (Overview, User Behavior, Map Analysis, Relationships) for monitoring operations, supported by the predictive models running behind the scenes to flag high-risk bookings and forecast demand.
 
