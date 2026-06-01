@@ -1,0 +1,7 @@
+# To be installed libraries for the project
+pandas
+numpy
+matplotlib
+scikit-learn
+seaborn
+# etc. (add any other libraries you need for your project)
