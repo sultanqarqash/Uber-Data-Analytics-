@@ -606,7 +606,7 @@ This analysis examines the distribution of ride requests across regions during e
 
 **Localized deployment value (Jordan):** alleviating urban congestion in Amman, Irbid, and Zarqa; supporting the National Vision for Digital Transformation; and improving driver income security through fuel-efficient routing.
 
-**Next steps (TODO):** package the trained models behind a live API or an interactive web app (e.g., Streamlit / FastAPI / Flask / Gradio), describe hosting and scheduling, and localize with Jordanian transportation data.
+**Next steps :** package the trained models behind a live API or an interactive web app (e.g., Streamlit / FastAPI / Flask / Gradio), describe hosting and scheduling, and localize with Jordanian transportation data.
 
 ---
 
